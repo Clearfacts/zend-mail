@@ -69,7 +69,8 @@ class Headers implements Countable, Iterator
         $emptyLine   = 0;
 
         // iterate the header lines, some might be continuations
-        $lines = explode($EOL, $string);
+        // support both \r\n and \n EOL
+        $lines = preg_split("/[\r]?\n/", $string);
         $total = count($lines);
         for ($i = 0; $i < $total; $i += 1) {
             $line = $lines[$i];
@@ -114,6 +115,7 @@ class Headers implements Countable, Iterator
         if ($currentLine) {
             $headers->addHeaderLine($currentLine);
         }
+
         return $headers;
     }
 
