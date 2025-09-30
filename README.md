@@ -15,3 +15,8 @@ the `Mail\Transport\TransportInterface`.
 
 - File issues at https://github.com/zendframework/zend-mail/issues
 - Documentation is at https://docs.zendframework.com/zend-mail/
+
+## Technical debt links
+
+[Barometer IT](https://wolterskluwer.barometerit.com/b/system/041800002496)
+[SonarQube Project](https://sonarqube.cloud-dev.wolterskluwer.eu//dashboard?id=clearfacts%3Azend-mail)
